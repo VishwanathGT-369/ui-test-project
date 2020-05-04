@@ -1,0 +1,62 @@
+
+<!-- Image and text -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <h1 style="padding-top: 1%;padding-left: 2%;">Smart Library</h1>
+
+  </nav>
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="card">
+        <img src="assets/images/VishvanathGT.jpg" class="rounded-circle" alt="Cinque Terre" width="30%" height="76px">
+        <h1>Vishwanath G T</h1>
+        <p class="title">Administrator</p>
+        <p>Harvard University</p>
+        <div style="margin: 24px 0;">
+          <a href="#"><i class="fa fa-dribbble"></i></a> 
+          <a href="#"><i class="fa fa-twitter"></i></a>  
+          <a href="#"><i class="fa fa-linkedin"></i></a>  
+          <a href="#"><i class="fa fa-facebook"></i></a> 
+        </div>
+      </div>
+      <div class="list-group list-group-flush">
+        <a routerLink="/dashboard" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">My Account</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Settings</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Manage Members</a>
+        <a routerLink="/viewbook" class="list-group-item list-group-item-action bg-light">Search Book</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Add Book</a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <div class="container-fluid">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
